@@ -34,11 +34,11 @@
 				</tr>
 				<tr>
 					<td><label>*Password: </label></td>
-					<td><input type="text" name="password" id="password" required/></td>
+					<td><input type="password" name="password" id="password" required/></td>
 				</tr>
 				<tr>
 					<td><label>*Confirm Password: </label></td>
-					<td><input type="text" name="c_password" id="c_password" required/></td>
+					<td><input type="password" name="c_password" id="c_password" required/></td>
 				</tr>
 				<tr>
 					<td><label>*Email: </label></td>

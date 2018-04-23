@@ -1,0 +1,22 @@
+@CHARSET "ISO-8859-1";
+.main {
+	color: maroon;
+	margin: 0 auto;
+	width: 900px;
+}
+
+.main h1, h2 {
+	text-align: center;
+}
+
+#formulario {
+	text-align: center;
+}
+
+table, tr, td{
+	border-style: none;
+}
+
+#submit_login {
+	margin-left: 50px;
+}
