@@ -19,10 +19,15 @@
 		<p>Fields marked(*) are mandatory</p>
 		</div>
 		<form id="formulario">
+		<div class="input">
 		<label>*First Name: </label>
 		<input name="nombre" id="nombre"/>
+		</div>
+		<div class="input">
 		<label>*Last Name: </label>
 		<input name="apellido" id="apellido"/>
+		</div>
+
 		</form>
 
 </div>
