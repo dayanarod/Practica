@@ -8,29 +8,72 @@
 <link rel="stylesheet" href="css\register.css"></link>
 </head>
 <body>
-<div class="main">
+	<div class="main">
 
 		<h1>Festival Registration System</h1>
 		<div id="nav">
-		<a href="index.jsp">Log In</a>
+			<a href="index.jsp">Log In</a>
 		</div>
 		<h2>Portal Login Page</h2>
 		<div id="titulo">
-		<p>Fields marked(*) are mandatory</p>
+			<p>Fields marked(*) are mandatory</p>
 		</div>
 		<form id="formulario">
-		<div class="input">
-		<label>*First Name: </label>
-		<input name="nombre" id="nombre"/>
-		</div>
-		<div class="input">
-		<label>*Last Name: </label>
-		<input name="apellido" id="apellido"/>
-		</div>
+			<table>
+				<tr>
+					<td><label>*First Name: </label></td>
+					<td><input type="text" name="nombre" id="nombre" required="required"/></td>
+				</tr>
+				<tr>
+					<td><label>*Last Name: </label></td>
+					<td><input type="text" name="apellido" id="apellido" required/></td>
+				</tr>
+				<tr>
+					<td><label>*User Name: </label></td>
+					<td><input type="text" name="user_name" id="user_name" required/></td>
+				</tr>
+				<tr>
+					<td><label>*Password: </label></td>
+					<td><input type="text" name="password" id="password" required/></td>
+				</tr>
+				<tr>
+					<td><label>*Confirm Password: </label></td>
+					<td><input type="text" name="c_password" id="c_password" required/></td>
+				</tr>
+				<tr>
+					<td><label>*Email: </label></td>
+					<td><input type="text" name="email" id="email" required/></td>
+				</tr>
+				<tr>
+					<td><label>*DNI ()XX.XXX.XXX-L): </label></td>
+					<td><input type="text" name="dni" id="dni" required/></td>
+				</tr>
+				<tr>
+					<td><label>*Phone number: </label></td>
+					<td><input type="text" name="phone" id="phone" required/></td>
+				</tr>
+				<tr>
+					<td><label>Address: </label></td>
+					<td><input type ="text" name="address" id="address"/></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td><input type="submit" value="Register" id="submit_register"/></td>
+				</tr>
+			</table>
 
 		</form>
-
-</div>
-
+	</div>
 </body>
 </html>
+<!--<script type="text/javascript"> -->
+<!--  $(document).ready(function() { -->
+<!--      $("#formID").validate({ -->
+<!--          rules : { -->
+<!--              login : { -->
+<!--                  required : true -->
+<!--              } -->
+<!--          }, -->
+<!--      }); -->
+<!--  }); -->
+<!--</script> -->

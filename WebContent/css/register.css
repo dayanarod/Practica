@@ -35,3 +35,11 @@
 #formulario {
 	text-align: center;
 }
+
+table, tr, td{
+	border-style: none;
+}
+
+#submit_register {
+	margin-left: 50px;
+}
