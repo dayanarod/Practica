@@ -1,0 +1,33 @@
+@CHARSET "ISO-8859-1";
+
+.main {
+	color: maroon;
+	margin: 0 auto;
+	width: 900px;
+}
+
+.main h1, h2 {
+	text-align: center;
+}
+
+
+
+#nav {
+	text-align: right;
+	padding-bottom: 10px;
+}
+
+#nav a {
+	margin-left: 10px;
+	font-size: small;
+}
+
+#titulo {
+	text-align: right;
+	padding-bottom: 10px;
+}
+
+#titulo p {
+	margin-left: 10px;
+	font-size: small;
+}
