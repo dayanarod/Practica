@@ -5,6 +5,10 @@
 	width: 900px;
 }
 
+h1 {
+	background-color: DarkCyan;
+}
+
 .main h1, h2 {
 	text-align: center;
 }
