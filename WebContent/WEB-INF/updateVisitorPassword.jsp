@@ -16,7 +16,7 @@
 			<a href="#">About</a>
 			<a href="#">My Portal</a>
 		</div>
-		<h2>Portal Login Page</h2>
+		<h2>Update your information</h2>
 
 		<form id="formulario">
 			<table>
