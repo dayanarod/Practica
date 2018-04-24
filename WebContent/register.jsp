@@ -18,19 +18,19 @@
 		<div id="titulo">
 			<p>Fields marked(*) are mandatory</p>
 		</div>
-		<form id="formulario">
+		<form id="formulario" method="post" action="NewVisitorController.java">
 			<table>
 				<tr>
 					<td><label>*First Name: </label></td>
-					<td><input type="text" name="nombre" id="nombre" required="required"/></td>
+					<td><input type="text" name="firstName" id="firstName" required="required"/></td>
 				</tr>
 				<tr>
 					<td><label>*Last Name: </label></td>
-					<td><input type="text" name="apellido" id="apellido" required/></td>
+					<td><input type="text" name="lastName" id="lastName" required/></td>
 				</tr>
 				<tr>
 					<td><label>*User Name: </label></td>
-					<td><input type="text" name="user_name" id="user_name" required/></td>
+					<td><input type="text" name="userName" id="userName" required/></td>
 				</tr>
 				<tr>
 					<td><label>*Password: </label></td>
