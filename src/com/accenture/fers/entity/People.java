@@ -14,18 +14,18 @@ import com.accenture.fers.utils.Validator;
 
 public class People {
 	//Declaraciones de las constantes de mínimo y máximo
-	public static final int ADRRESSMIN = 0;
-	public static final int ADRRESSMAX = 30;
-	public static final int FIRSTNAMEMIN = 1;
-	public static final int FIRSTNAMEMAX = 30;
-	public static final int LASTNAMEMIN = 1;
-	public static final int LASTNAMEMAX = 30;
-	public static final int EMAILMIN = 3;
-	public static final int EMAILMAX = 200;
-	public static final int PHONENUMBERMIN = 10;
-	public static final int PHONENUMBERMAX = 20;
-	public static final int DNIMIN = 12;
-	public static final int DNIMAX = 12;
+	public static final int ADRRESS_MIN = 0;
+	public static final int ADRRESS_MAX = 30;
+	public static final int FIRST_NAME_MIN = 1;
+	public static final int FIRST_NAME_MAX = 30;
+	public static final int LAST_NAME_MIN = 1;
+	public static final int LAST_NAME_MAX = 30;
+	public static final int EMAIL_MIN = 3;
+	public static final int EMAIL_MAX = 200;
+	public static final int PHONE_NUMBER_MIN = 10;
+	public static final int PHONE_NUMBER_MAX = 20;
+	public static final int DNI_MIN = 12;
+	public static final int DNI_MAX = 12;
 
 	//Variables privadas de la clase People
 	private String address;
@@ -68,7 +68,7 @@ public class People {
 	 */
 	public void setAddress(String address) {
 		//Validamos si la longitud de los caracteres está entre el min y máx
-		if(Validator.lengthValidation(address,ADRRESSMIN, ADRRESSMAX)){
+		if(Validator.lengthValidation(address,ADRRESS_MIN, ADRRESS_MAX)){
 			this.address = address;
 		}else{
 			//Creamos la excepcion ERM_017 = "Invalid Addres"
@@ -87,7 +87,7 @@ public class People {
 	public void setFirstName(String firstName) {
 		//Validamos que no sea nulo
 		//y que la longitud de los caracteres está entre el min y máx
-		if(firstName!=null && Validator.lengthValidation(firstName,FIRSTNAMEMIN, FIRSTNAMEMAX)){
+		if(firstName!=null && Validator.lengthValidation(firstName,FIRST_NAME_MIN, FIRST_NAME_MAX)){
 			this.firstName = firstName;
 		}else{
 			//Creamos la excepcion ERM_015 = "Invalid FirstName"
@@ -106,7 +106,7 @@ public class People {
 	public void setLastName(String lastName) {
 		//Validamos que no sea nulo
 		//y que la longitud de los caracteres está entre el min y máx
-		if(lastName!=null && Validator.lengthValidation(lastName,LASTNAMEMIN, LASTNAMEMAX)){
+		if(lastName!=null && Validator.lengthValidation(lastName,LAST_NAME_MIN, LAST_NAME_MAX)){
 			this.lastName = lastName;
 		}else{
 			//Creamos la excepcion ERM_016 = "Invalid LastName"
@@ -126,8 +126,8 @@ public class People {
 		//Validamos que no sea nulo
 		//Validamos que la longitud de los caracteres está entre el min y máx
 		//Validamos que el email sea válido
-		if(email!=null && Validator.lengthValidation(email,EMAILMIN, EMAILMAX)
-				&& Validator.emailValidation(email, EMAILMAX, EMAILMIN)){
+		if(email!=null && Validator.lengthValidation(email,EMAIL_MIN, EMAIL_MAX)
+				&& Validator.emailValidation(email, EMAIL_MAX, EMAIL_MIN)){
 			this.email = email;
 		}else{
 			//Creamos la excepcion ERM_011 = "Invalid DNI"
@@ -147,8 +147,8 @@ public class People {
 		//Validamos que no sea nulo
 		//Validamos que la longitud de los caracteres está entre el min y máx
 		//Validamos que el tlf sea válido
-		if(phoneNumber!=null && Validator.lengthValidation(phoneNumber,PHONENUMBERMIN, PHONENUMBERMAX)
-				&& Validator.phoneValidation(phoneNumber, PHONENUMBERMAX, PHONENUMBERMIN)){
+		if(phoneNumber!=null && Validator.lengthValidation(phoneNumber,PHONE_NUMBER_MIN, PHONE_NUMBER_MAX)
+				&& Validator.phoneValidation(phoneNumber, PHONE_NUMBER_MAX, PHONE_NUMBER_MIN)){
 			this.phoneNumber = phoneNumber;
 		}else{
 			//Creamos la excepcion ERM_010 = "Invalid Email ID"
@@ -168,7 +168,7 @@ public class People {
 		//Validamos que no sea nulo
 		//Validamos que la longitud de los caracteres está entre el min y máx
 		//Validamos que el dni sea válido
-		if(dni!=null && Validator.lengthValidation(dni,DNIMIN, DNIMAX) && Validator.dniValidation(dni, DNIMAX, DNIMIN)){
+		if(dni!=null && Validator.lengthValidation(dni,DNI_MIN, DNI_MAX) && Validator.dniValidation(dni, DNI_MAX, DNI_MIN)){
 			this.dni = dni;
 		}else{
 			//Creamos la excepcion ERM_012 = "Invalid DNI"

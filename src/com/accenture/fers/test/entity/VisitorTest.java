@@ -16,7 +16,7 @@ import com.accenture.fers.entity.Visitor;
 import com.accenture.fers.exceptions.FERSGenericException;
 
 /**
- * @author Sonia Borreguero Niño
+ * @author Diana Rodera Rojas
  *
  */
 public class VisitorTest {
@@ -29,12 +29,12 @@ public class VisitorTest {
 
 	@Before
 	public void setUp() throws Exception {
-		visitor.setAddress("calle valdemoro");
-		visitor.setFirstName("Sonia");
-		visitor.setLastName("Borreguero");
-		visitor.setEmail("xhelis@hotmail");
+		visitor.setAddress("calle malaga");
+		visitor.setFirstName("Diana");
+		visitor.setLastName("Rodera");
+		visitor.setEmail("dayanarod@hotmail");
 		visitor.setPhoneNumber("+34 555 555 555");
-		visitor.setDni("53.426.182-b");
+		visitor.setDni("46.922.888-J");
 		visitor.setUserName("Pepita1");
 		visitor.setPassword("1234567");
 		visitor.setConfirmPassword("1234567");
@@ -218,7 +218,7 @@ public class VisitorTest {
 	 */
 	@Test
 	public void testGetAddress() {
-		assertEquals("calle valdemoro", visitor.getAddress());
+		assertEquals("calle malaga", visitor.getAddress());
 	}
 
 	/**
@@ -255,7 +255,7 @@ public class VisitorTest {
 	 */
 	@Test
 	public void testGetFirstName() {
-		assertEquals("Sonia", visitor.getFirstName());
+		assertEquals("Diana", visitor.getFirstName());
 	}
 
 	/**
@@ -298,7 +298,7 @@ public class VisitorTest {
 	 */
 	@Test
 	public void testGetLastName() {
-		assertEquals("Borreguero", visitor.getLastName());
+		assertEquals("Rodera", visitor.getLastName());
 	}
 
 	/**
@@ -341,7 +341,7 @@ public class VisitorTest {
 	 */
 	@Test
 	public void testGetEmail() {
-		assertEquals("xhelis@hotmail", visitor.getEmail());
+		assertEquals("dayanarod@hotmail", visitor.getEmail());
 	}
 
 	/**
@@ -373,31 +373,31 @@ public class VisitorTest {
 		// Caso por debajo del mínimo
 		assertFail(consumer, "", FERSGenericException.ERM_011);
 		// Caso: El local termina con un punto
-		assertFail(consumer, "sonia.@ss", FERSGenericException.ERM_011);
+		assertFail(consumer, ".@rr", FERSGenericException.ERM_011);
 		// Caso: Contiene más de un @
-		assertFail(consumer, "sonia@@s", FERSGenericException.ERM_011);
+		assertFail(consumer, "didi@@r", FERSGenericException.ERM_011);
 		// Caso: El dominio está vacio
-		assertFail(consumer, "sonia@", FERSGenericException.ERM_011);
+		assertFail(consumer, "didi@", FERSGenericException.ERM_011);
 		// Caso: Contiene un caracter no permitido " ( "
-		assertFail(consumer, "sonia@s(", FERSGenericException.ERM_011);
+		assertFail(consumer, "didi@r(", FERSGenericException.ERM_011);
 		// Caso: Contiene un caracter no permitido " ) "
-		assertFail(consumer, "sonia@s)", FERSGenericException.ERM_011);
+		assertFail(consumer, "didi@r)", FERSGenericException.ERM_011);
 		// Caso: Contiene un caracter no permitido " [ "
-		assertFail(consumer, "sonia@s[", FERSGenericException.ERM_011);
+		assertFail(consumer, "didi@r[", FERSGenericException.ERM_011);
 		// Caso: Contiene un caracter no permitido " ] "
-		assertFail(consumer, "sonia@s]", FERSGenericException.ERM_011);
+		assertFail(consumer, "didi@r]", FERSGenericException.ERM_011);
 		// Caso: Contiene un caracter no permitido " ; "
-		assertFail(consumer, "sonia@s;", FERSGenericException.ERM_011);
+		assertFail(consumer, "didi@r;", FERSGenericException.ERM_011);
 		// Caso: Contiene un caracter no permitido " : "
-		assertFail(consumer, "sonia@s:", FERSGenericException.ERM_011);
+		assertFail(consumer, "didi@r:", FERSGenericException.ERM_011);
 		// Caso: Contiene un caracter no permitido " , "
-		assertFail(consumer, "sonia@s,", FERSGenericException.ERM_011);
+		assertFail(consumer, "didi@r,", FERSGenericException.ERM_011);
 		// Caso: Contiene un caracter no permitido " < "
-		assertFail(consumer, "sonia@s<", FERSGenericException.ERM_011);
+		assertFail(consumer, "didi@r<", FERSGenericException.ERM_011);
 		// Caso: Contiene un caracter no permitido " > "
-		assertFail(consumer, "sonia@s>", FERSGenericException.ERM_011);
+		assertFail(consumer, "didi@r>", FERSGenericException.ERM_011);
 		// Caso: Contiene un caracter no permitido " - "
-		assertFail(consumer, "sonia@s-", FERSGenericException.ERM_011);
+		assertFail(consumer, "didi@r-", FERSGenericException.ERM_011);
 		// Caso por encima del máximo
 		assertFail(consumer, "a@" + cadenaString("A", 200), FERSGenericException.ERM_011);
 	}
@@ -454,7 +454,7 @@ public class VisitorTest {
 	 */
 	@Test
 	public void testGetDniPositivo() {
-		assertEquals("53.426.182-b", visitor.getDni());
+		assertEquals("46.922.888-J", visitor.getDni());
 	}
 
 	/**
@@ -465,8 +465,8 @@ public class VisitorTest {
 	public void testSetDniPositivo() {
 		// Primero valoramos que esté en el mínimo permitido
 		// Damos un valor a nuestro objeto
-		visitor.setDni("53.426.182-b");
-		assertEquals("53.426.182-b", visitor.getDni());
+		visitor.setDni("46.922.888-J");
+		assertEquals("46.922.888-J", visitor.getDni());
 	}
 
 	/**
@@ -480,13 +480,13 @@ public class VisitorTest {
 		// Caso null
 		assertFail(consumer, null, FERSGenericException.ERM_012);
 		// Sin letra
-		assertFail(consumer, "53.426.182-", FERSGenericException.ERM_012);
+		assertFail(consumer, "46.922.888-", FERSGenericException.ERM_012);
 		// Sin letra erronea
-		assertFail(consumer, "53.426.182-A", FERSGenericException.ERM_012);
+		assertFail(consumer, "46.922.888-A", FERSGenericException.ERM_012);
 		// Sin puntos
-		assertFail(consumer, "00052426182B", FERSGenericException.ERM_012);
+		assertFail(consumer, "00046922888J", FERSGenericException.ERM_012);
 		// Menos numeros
-		assertFail(consumer, "2.426.182-B", FERSGenericException.ERM_012);
+		assertFail(consumer, "6.922.888-J", FERSGenericException.ERM_012);
 	}
 
 	// metodo generar un string

@@ -15,8 +15,16 @@ public class Event {
 
 
 	//Declaración de variables constantes para los caracteres mín y max
-	public static final int CARACTERMIN = 1;
-	public static final int CARACTERMAX = 45;
+	public static final int EVENT_NAME_MIN = 1;
+	public static final int EVENT_NAME_MAX = 45;
+	public static final int DESCRIPCION_MIN = 1;
+	public static final int DESCRIPCION_MAX = 45;
+	public static final int PLACE_MIN = 1;
+	public static final int PLACE_MAX = 45;
+	public static final int DURATION_MIN = 1;
+	public static final int DURATION_MAX = 45;
+	public static final int TYPE_EVENT_MIN = 1;
+	public static final int TYPE_EVENT_MAX = 45;
 
 
 	//Declaracion de variables de la clase Event
@@ -76,7 +84,7 @@ public class Event {
 	 */
 	public void setName(String name) {
 		//Comprobamos que no sea nulo y que esté en el rango de min y max de caracteres
-		if(name!=null && Validator.lengthValidation(name,CARACTERMIN, CARACTERMAX)){
+		if(name!=null && Validator.lengthValidation(name,EVENT_NAME_MIN, EVENT_NAME_MAX)){
 			this.name = name;
 		}else{
 			//Creamos excepción ERM_018 = "Invalid Event Name"
@@ -94,7 +102,7 @@ public class Event {
 	 */
 	public void setDescription(String description) {
 		//Validamos que no sea nulo y que esté en el rango de min y max de caracteres
-		if(description!=null && Validator.lengthValidation(description,CARACTERMIN, CARACTERMAX)){
+		if(description!=null && Validator.lengthValidation(description,DESCRIPCION_MIN, DESCRIPCION_MAX)){
 			this.description = description;
 		}else{
 			//Creamos excepción ERM_019 = "Invalid Event Description"
@@ -112,7 +120,7 @@ public class Event {
 	 */
 	public void setPlace(String place) {
 		//Validamos que no sea nulo y que esté en el rango de min y max de caracteres
-		if(place!=null && Validator.lengthValidation(place,CARACTERMIN, CARACTERMAX)){
+		if(place!=null && Validator.lengthValidation(place,PLACE_MIN, PLACE_MAX)){
 			this.place = place;
 		}else{
 			//Creamos excepción ERM_020 = "Invalid Event Place"
@@ -130,7 +138,7 @@ public class Event {
 	 */
 	public void setDuration(String duration) {
 		//Validamos que no sea nulo y que esté en el rango de min y max de caracteres
-		if(duration!=null && Validator.lengthValidation(duration,CARACTERMIN, CARACTERMAX)){
+		if(duration!=null && Validator.lengthValidation(duration,DURATION_MIN, DURATION_MAX)){
 			this.duration = duration;
 		}else{
 			//Creamos excepción ERM_021 = "Invalid Event Duration"
@@ -148,7 +156,7 @@ public class Event {
 	 */
 	public void setEventType(String eventType) {
 		//Validamos que no sea nulo y que esté en el rango de min y max de caracteres
-		if(eventType!=null && Validator.lengthValidation(eventType,CARACTERMIN, CARACTERMAX)){
+		if(eventType!=null && Validator.lengthValidation(eventType,TYPE_EVENT_MIN, TYPE_EVENT_MAX)){
 			this.eventType = eventType;
 		}else{
 			//Creamos excepción ERM_022 = "Invalid Event Type"

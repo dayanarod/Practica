@@ -15,8 +15,8 @@ import com.accenture.fers.entity.Event;
 import com.accenture.fers.exceptions.FERSGenericException;
 
 /**
- * @author Sonia Borreguero Niño
- * @since 17/04/2018
+ * @author Diana Rodera Rojas
+ * @since 19/04/2018
  * @version v1 Clase de prueba Event Test
  */
 public class EventTest {
@@ -87,24 +87,6 @@ public class EventTest {
 		assertEquals(cadenaString("A", 45), evento.getName());
 	}
 
-	// Primera version(version larga)
-	/*
-	 * @Test public void testSetNameNegativeNull() { try{ evento.setName(null);
-	 * fail("Not yet implemented"); }catch(Exception ex){
-	 * assertEquals(FERSGenericException.ERM_018, ex.getMessage()); } }
-	 *
-	 * @Test public void testSetNameNegativeMin() {
-	 *
-	 * try{ evento.setName(""); fail("Not yet implemented"); }catch(Exception
-	 * ex){ assertEquals(FERSGenericException.ERM_018, ex.getMessage()); } }
-	 *
-	 * @Test public void testSetNameNegativeMax() {
-	 *
-	 * try{ evento.setName(cadenaString("A",46)); fail("Not yet implemented");
-	 * }catch(Exception ex){ assertEquals(FERSGenericException.ERM_018,
-	 * ex.getMessage()); } }
-	 */
-	// Version 2.(Método corto)
 	@Test
 	public void testSetNameNegativo() {
 		// Creamos nuestra expresion lambda de tipo Consumer

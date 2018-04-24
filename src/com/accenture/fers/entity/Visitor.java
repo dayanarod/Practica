@@ -16,9 +16,10 @@ import com.accenture.fers.utils.Validator;
 public class Visitor extends People {
 
 	// Declaraciones de las constantes de mínimo y máximo
-	public static final int CARACTERMIN = 6;
-	public static final int USERMAX = 12;
-	public static final int PASSWORDMAX = 15;
+	public static final int USER_MIN = 6;
+	public static final int USER_MAX = 12;
+	public static final int PASSWORD_MIN = 6;
+	public static final int PASSWORD_MAX = 15;
 
 	//Declaraciones de las variables de Visitor
 	private int visitorId;
@@ -71,7 +72,7 @@ public class Visitor extends People {
 	 */
 	public void setUserName(String userName) {
 		//Validamos: no null, rango de caracteres permitidos
-		if(userName!=null && Validator.lengthValidation(userName,CARACTERMIN, USERMAX)){
+		if(userName!=null && Validator.lengthValidation(userName,USER_MIN, USER_MAX)){
 			this.userName = userName;
 		}else{
 			//Creamos la excepción ERM_013 = "Invalid username"
@@ -89,7 +90,7 @@ public class Visitor extends People {
 	 */
 	public void setPassword(String password) {
 		//Validamos: no null, rango de caracteres permitidos
-		if(password!=null && Validator.lengthValidation(password,CARACTERMIN, PASSWORDMAX)){
+		if(password!=null && Validator.lengthValidation(password,PASSWORD_MIN, PASSWORD_MAX)){
 			this.password = password;
 		}else{
 			//Creamos la excepción ERM_014 = "Invalid password"
@@ -107,7 +108,7 @@ public class Visitor extends People {
 	 */
 	public void setConfirmPassword(String confirmPassword) {
 		//Validamos: no null, rango de caracteres permitidos
-		if(confirmPassword!=null && Validator.lengthValidation(confirmPassword,CARACTERMIN, PASSWORDMAX)){
+		if(confirmPassword!=null && Validator.lengthValidation(confirmPassword,PASSWORD_MIN, PASSWORD_MAX)){
 			this.confirmPassword = confirmPassword;
 		}else{
 			//Creamos la excepción ERM_009 = "Password and confirm password must be same!!"

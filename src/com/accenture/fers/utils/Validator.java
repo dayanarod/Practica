@@ -1,8 +1,8 @@
 package com.accenture.fers.utils;
 
 /**
- * @author Sonia Borreguero Niño
- * @since 17/04/18
+ * @author Diana Rodera Rojas
+ * @since 19/04/18
  * @version v1 This class validates data introduced by the user
  */
 
