@@ -15,6 +15,9 @@ public class UpdateVisitorController implements IController{
 
 		String firstName = request.getParameter("firstname");
 		String lastName = request.getParameter("lastName");
+		String userName = request.getParameter("userName");
+		String password = request.getParameter("password");
+		String c_password = request.getParameter("c_password");
 		String email = request.getParameter("email");
 		String dni = request.getParameter("dni");
 		String phone = request.getParameter("phone");
@@ -25,6 +28,9 @@ public class UpdateVisitorController implements IController{
 		try{
 			visitor.setFirstName(firstName);
 			visitor.setLastName(lastName);
+			visitor.setUserName(userName);
+			visitor.setPassword(password);
+			visitor.setConfirmPassword(c_password);
 			visitor.setEmail(email);
 			visitor.setDni(dni);
 			visitor.setPhoneNumber(phone);
@@ -35,7 +41,6 @@ public class UpdateVisitorController implements IController{
 		}catch(NullPointerException e){
 			throw new FERSGenericException(CTE_ERM_024);
 		}
-
 
 		return url;
 	}
