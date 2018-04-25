@@ -9,7 +9,7 @@ public class ChangePasswordController implements IController{
 	public String process(HttpServletRequest request,
 			HttpServletResponse response) {
 
-		String
+
 		return null;
 	}
 
