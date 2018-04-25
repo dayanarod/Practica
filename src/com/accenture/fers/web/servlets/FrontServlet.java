@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.accenture.fers.web.controllers.IController;
-import com.accenture.fers.web.controllers.RegisterController;
+import com.accenture.fers.web.controllers.NewVisitorController;
 
 
 /**
@@ -28,7 +28,7 @@ public class FrontServlet extends HttpServlet {
      */
     public FrontServlet() {
         super();
-        controllers.put("/register.do", new RegisterController());
+        controllers.put("/register.do", new NewVisitorController());
 
     }
 
