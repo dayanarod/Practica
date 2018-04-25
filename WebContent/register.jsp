@@ -22,35 +22,35 @@
 			<table>
 				<tr>
 					<td><label>*First Name: </label></td>
-					<td><input type="text" name="firstName" id="firstName" required="required"/></td>
+					<td><input type="text" name="firstName" id="firstName"></td>
 				</tr>
 				<tr>
 					<td><label>*Last Name: </label></td>
-					<td><input type="text" name="lastName" id="lastName" required/></td>
+					<td><input type="text" name="lastName" id="lastName"/></td>
 				</tr>
 				<tr>
 					<td><label>*User Name: </label></td>
-					<td><input type="text" name="userName" id="userName" required/></td>
+					<td><input type="text" name="userName" id="userName"/></td>
 				</tr>
 				<tr>
 					<td><label>*Password: </label></td>
-					<td><input type="password" name="password" id="password" required/></td>
+					<td><input type="password" name="password" id="password"/></td>
 				</tr>
 				<tr>
 					<td><label>*Confirm Password: </label></td>
-					<td><input type="password" name="c_password" id="c_password" required/></td>
+					<td><input type="password" name="c_password" id="c_password"/></td>
 				</tr>
 				<tr>
 					<td><label>*Email: </label></td>
-					<td><input type="text" name="email" id="email" required/></td>
+					<td><input type="text" name="email" id="email"/></td>
 				</tr>
 				<tr>
 					<td><label>*DNI ()XX.XXX.XXX-L): </label></td>
-					<td><input type="text" name="dni" id="dni" required/></td>
+					<td><input type="text" name="dni" id="dni"/></td>
 				</tr>
 				<tr>
 					<td><label>*Phone number: </label></td>
-					<td><input type="text" name="phone" id="phone" required/></td>
+					<td><input type="text" name="phone" id="phone"/></td>
 				</tr>
 				<tr>
 					<td><label>Address: </label></td>
