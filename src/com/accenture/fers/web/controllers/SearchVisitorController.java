@@ -30,7 +30,7 @@ public class SearchVisitorController implements IController {
 
 		if (visitorFound != null) {
 			HttpSession sesion = request.getSession(true);
-			sesion.setAttribute("visitor", visitor);
+			sesion.setAttribute("login", visitorFound);
 		} else {
 			url = "index.jsp";
 		}

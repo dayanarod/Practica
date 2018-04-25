@@ -32,15 +32,7 @@
 				</tr>
 				<tr>
 					<td><label>*User Name: </label></td>
-					<td><input type="text" name="user_name" id="user_name"/></td>
-				</tr>
-				<tr>
-					<td><label>*Password: </label></td>
-					<td><input type="password" name="password" id="password"/></td>
-				</tr>
-				<tr>
-					<td><label>*Confirm Password: </label></td>
-					<td><input type="password" name="c_password" id="c_password"/></td>
+					<td><input type="text" name="user_name" id="user_name" disabled/></td>
 				</tr>
 				<tr>
 					<td><label>*Email: </label></td>

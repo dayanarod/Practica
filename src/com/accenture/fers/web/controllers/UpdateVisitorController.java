@@ -6,8 +6,9 @@ import com.accenture.fers.entity.*;
 import com.accenture.fers.exceptions.FERSGenericException;
 import com.accenture.fers.service.*;
 
-public class UpdateVisitorController implements IController{
-	public static final String CTE_ERM_024 = "Invalid username/password";
+public class UpdateVisitorController implements IController {
+	public static final String CTE_ERM_027 = "Error in update.. Please Check fields and retry";
+
 	@Override
 	public String process(HttpServletRequest request,
 			HttpServletResponse response) {
@@ -15,31 +16,35 @@ public class UpdateVisitorController implements IController{
 
 		String firstName = request.getParameter("firstname");
 		String lastName = request.getParameter("lastName");
-		String userName = request.getParameter("userName");
-		String password = request.getParameter("password");
-		String c_password = request.getParameter("c_password");
 		String email = request.getParameter("email");
 		String dni = request.getParameter("dni");
 		String phone = request.getParameter("phone");
 		String address = request.getParameter("address");
-		Visitor visitor = new Visitor();
 
+		HttpSession sesion = request.getSession();
+//		Visitor visitorUpdate = new Visitor();
+//		sesion.setAttribute("login", visitorUpdate);
+		Visitor visitorUpdate = (Visitor) sesion.getAttribute("login");
+		VisitorService vs = new VisitorService();
 
-		try{
-			visitor.setFirstName(firstName);
-			visitor.setLastName(lastName);
-			visitor.setUserName(userName);
-			visitor.setPassword(password);
-			visitor.setConfirmPassword(c_password);
-			visitor.setEmail(email);
-			visitor.setDni(dni);
-			visitor.setPhoneNumber(phone);
-			visitor.setAddress(address);
-			VisitorService vs = new VisitorService();
-			Visitor visitorUpdate = new Visitor();
+		try {
+			visitorUpdate.setFirstName(firstName);
+			visitorUpdate.setLastName(lastName);
+			visitorUpdate.setEmail(email);
+			visitorUpdate.setDni(dni);
+			visitorUpdate.setPhoneNumber(phone);
+			visitorUpdate.setAddress(address);
 
-		}catch(NullPointerException e){
-			throw new FERSGenericException(CTE_ERM_024);
+		} catch (NullPointerException e) {
+			throw new FERSGenericException(CTE_ERM_027);
+		}
+
+		int update = vs.updateVisitorDetails(visitorUpdate);
+		if(update == 1){
+			sesion.setAttribute("login", visitorUpdate);
+			url = "/WEB-INF/portal.jsp";
+		} else {
+			url = "/WEB-INF/updateVisitorInformation.jsp";
 		}
 
 		return url;
