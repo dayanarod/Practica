@@ -22,15 +22,15 @@
 			<table>
 				<tr>
 					<td><label>Current password: </label></td>
-					<td><input type="text" name="current_pass" id="current_pass" required="required"/></td>
+					<td><input type="text" name="current_pass" id="current_pass"/></td>
 				</tr>
 				<tr>
 					<td><label>New password: </label></td>
-					<td><input type="text" name="new_pass" id="new_pass" required/></td>
+					<td><input type="text" name="new_pass" id="new_pass"/></td>
 				</tr>
 				<tr>
 					<td><label>Repeat new password: </label></td>
-					<td><input type="text" name="r_new_pass" id="r_new_pass" required/></td>
+					<td><input type="text" name="r_new_pass" id="r_new_pass"/></td>
 				</tr>
 				<tr>
 				<td></td>
