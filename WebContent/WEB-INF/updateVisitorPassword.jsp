@@ -18,7 +18,7 @@
 		</div>
 		<h2>Update your information</h2>
 
-		<form id="formulario">
+		<form id="formulario" method ="post" action="">
 			<table>
 				<tr>
 					<td><label>Current password: </label></td>

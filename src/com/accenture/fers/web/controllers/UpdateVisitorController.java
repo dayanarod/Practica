@@ -11,7 +11,7 @@ public class UpdateVisitorController implements IController {
 	@Override
 	public String process(HttpServletRequest request,
 			HttpServletResponse response) {
-		String url = "updateVisitorInfo.jsp";
+		String url = "/WEB-INF/updateVisitorInfo.jsp";
 
 		String firstName = request.getParameter("firstname");
 		String lastName = request.getParameter("lastName");
@@ -23,7 +23,7 @@ public class UpdateVisitorController implements IController {
 		HttpSession sesion = request.getSession();
 //		Visitor visitorUpdate = new Visitor();
 //		sesion.setAttribute("login", visitorUpdate);
-		Visitor visitorUpdate = (Visitor) sesion.getAttribute("login");
+		Visitor visitorUpdate = (Visitor)sesion.getAttribute("login");
 		VisitorService vs = new VisitorService();
 
 		try {
@@ -34,19 +34,17 @@ public class UpdateVisitorController implements IController {
 			visitorUpdate.setPhoneNumber(phone);
 			visitorUpdate.setAddress(address);
 
+			int update = vs.updateVisitorDetails(visitorUpdate);
+			if(update == 1){
+				sesion.setAttribute("login", visitorUpdate);
+				url = "/WEB-INF/portal.jsp";
+			} else {
+				url = "/WEB-INF/updateVisitorInformation.jsp";
+			}
+
 		} catch (NullPointerException e) {
 			throw new FERSGenericException(CTE_ERM_027);
 		}
-
-		int update = vs.updateVisitorDetails(visitorUpdate);
-		if(update == 1){
-			sesion.setAttribute("login", visitorUpdate);
-			url = "/WEB-INF/portal.jsp";
-		} else {
-			url = "/WEB-INF/updateVisitorInformation.jsp";
-		}
-
 		return url;
 	}
-
 }

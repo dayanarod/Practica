@@ -29,7 +29,7 @@ public class NewVisitorController implements IController {
 
 		try {
 			if ((password != c_password) || (password.length() < 5)) {
-				request.setAttribute("Fail", CTE_ERM_025);
+				request.setAttribute("fail", CTE_ERM_025);
 				url = "/register.jsp";
 			} else {
 				visitor.setUserName(userName);
@@ -52,7 +52,7 @@ public class NewVisitorController implements IController {
 				url ="/register.jsp";
 			}
 		} catch (NullPointerException e) {
-			request.setAttribute("Fail", CTE_ERM_026);
+			request.setAttribute("fail", CTE_ERM_026);
 			url = "/register.jsp";
 		}
 		return url;
