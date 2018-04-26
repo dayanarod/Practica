@@ -22,7 +22,7 @@ public class VisitorDAO implements IVisitorDAO{
 		Visitor visitor = new Visitor();
 		visitor.setVisitorId(1);
 		visitor.setUserName("angeles");
-		visitor.setPassword("aaaaaa");
+		visitor.setPassword("asdfgh");
 		visitor.setFirstName("Angeles");
 		visitor.setLastName("Gonzalez");
 		visitor.setEmail("a@a.com");

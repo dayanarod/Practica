@@ -11,7 +11,7 @@
 	<div class="main">
 		<h1>Festival Registration System</h1>
 		<h2>Portal Login Page</h2>
-		<form id="formulario">
+		<form id="formulario" method="post" action="searchVisitor.do">
 			<table>
 				<tr>
 					<td><label>Visitor name: </label></td>

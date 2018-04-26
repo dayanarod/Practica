@@ -8,34 +8,35 @@
 <link rel="stylesheet" href="/css\portal.css"></link>
 </head>
 <body>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 	<div class="main">
 
 		<h1>Festival Registration System</h1>
 		<div id="nav">
-			<a href="/index.jsp">Log Out</a> <a href="#">About</a> <a href="#">Event
-				Catalogue</a>
+			<a href="logoutController.do">Log Out</a> <a href="#">About</a> <a
+				href="#">Event Catalogue</a>
 		</div>
-		<h2>Festival Portal Page: Welcome to your portal page:</h2>
+		<h2>Festival Portal Page: Welcome <span id="user"></span>to your portal page:</h2>
 
 		<div id="personal_information">
 			<p>
 				Your personal information is below. To change your information <a
-					href="#">click here</a>
+					href="#">Update Visitor</a> <a href="#">Update password</a>
 			</p>
 			<p>
-				UserName: <span id="username"></span>
+				UserName: <span id="username">${sessionScope.login.userName}</span>
 			</p>
 			<p>
-				Visitor ID: <span id="visitorid"></span>
+				Visitor ID: <span id="visitorid">${sessionScope.login.visitorId}</span>
 			</p>
 			<p>
-				Email: <span id="email"></span>
+				Email: <span id="email">${sessionScope.login.email}</span>
 			</p>
 			<p>
-				Phone Number: <span id="phonenumber"></span>
+				Phone Number: <span id="phonenumber">${sessionScope.login.phoneNumber }</span>
 			</p>
 			<p>
-				Address: <span id="address"></span>
+				Address: <span id="address">${sessionScope.login.address}</span>
 			</p>
 		</div>
 		<hr></hr>
@@ -53,7 +54,6 @@
 						<th>Event type</th>
 						<th>Action</th>
 					</tr>
-
 				</table>
 			</form>
 		</div>
@@ -73,7 +73,19 @@
 						<th>Available Tickets</th>
 						<th>Action</th>
 					</tr>
-
+					<c:forEach var="event" items="${applicationScope.eventList}">
+						<tr>
+							<td>${event.eventId}</td>
+							<td>${event.name}</td>
+							<td>${event.description}</td>
+							<td>${event.place}</td>
+							<td>${event.duration}</td>
+							<td>${event.eventType}</td>
+							<td>${event.seatsAvailable}</td>
+							<td><a href="eventReg.do?eventId=${event.eventId}">Register
+									Here</a></td>
+						</tr>
+					</c:forEach>
 				</table>
 			</form>
 		</div>

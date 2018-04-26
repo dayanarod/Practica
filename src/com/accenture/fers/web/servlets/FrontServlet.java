@@ -10,10 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.accenture.fers.web.controllers.IController;
-import com.accenture.fers.web.controllers.NewVisitorController;
-
+import com.accenture.fers.web.controllers.*;
 
 /**
  * Servlet implementation class FrontServlet
@@ -28,7 +25,14 @@ public class FrontServlet extends HttpServlet {
      */
     public FrontServlet() {
         super();
-        controllers.put("/register.do", new NewVisitorController());
+        controllers.put("/newVisitor.do", new NewVisitorController());
+        controllers.put("/searchVisitor.do", new SearchVisitorController());
+        controllers.put("/updateVisitor.do", new UpdateVisitorController());
+        controllers.put("/changePassword.do", new ChangePasswordController());
+        controllers.put("/eventReg.do", new EventRegController());
+        controllers.put("/eventUnreg.do", new EventUnregController());
+        controllers.put("/displayView.do", new DisplayViewController());
+        controllers.put("/logoutController.do", new LogoutController());
 
     }
 

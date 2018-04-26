@@ -11,7 +11,7 @@ public class SearchVisitorController implements IController {
 	public String process(HttpServletRequest request,
 			HttpServletResponse response) {
 
-		String url = "";
+		String url = "WEB-INF/portal.jsp";
 
 		String visitor_name = request.getParameter("visitor_name");
 		String visitor_pass = request.getParameter("visitor_pass");

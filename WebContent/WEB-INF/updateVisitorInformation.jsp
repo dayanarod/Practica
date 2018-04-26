@@ -20,7 +20,7 @@
 		<div id="titulo">
 			<p>Fields marked(*) are mandatory</p>
 		</div>
-		<form method="post" action="" id="formulario">
+		<form method="post" action="updateVisitor.do" id="formulario">
 			<table>
 				<tr>
 					<td><label>*First Name: </label></td>

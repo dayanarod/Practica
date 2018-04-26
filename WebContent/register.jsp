@@ -18,7 +18,7 @@
 		<div id="titulo">
 			<p>Fields marked(*) are mandatory</p>
 		</div>
-		<form id="formulario" method="post" action="NewVisitorController.java">
+		<form id="formulario" method="post" action="newVisitor.do">
 			<table>
 				<tr>
 					<td><label>*First Name: </label></td>
