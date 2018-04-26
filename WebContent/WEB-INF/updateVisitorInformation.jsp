@@ -24,31 +24,32 @@
 			<table>
 				<tr>
 					<td><label>*First Name: </label></td>
-					<td><input type="text" name="nombre" id="nombre"/></td>
+					<td><input type="text" name="nombre" id="nombre" value="${sessionScope.login.firstName}"/></td>
 				</tr>
 				<tr>
 					<td><label>*Last Name: </label></td>
-					<td><input type="text" name="apellido" id="apellido"/></td>
+					<td><input type="text" name="apellido" id="apellido" value = "${sessionScope.login.lastName}"/></td>
 				</tr>
 				<tr>
 					<td><label>*User Name: </label></td>
-					<td><input type="text" name="user_name" id="user_name" disabled/></td>
+					<td><input type="text" name="user_name" id="user_name" disabled
+					value ="${sessionScope.login.user_name}"/></td>
 				</tr>
 				<tr>
 					<td><label>*Email: </label></td>
-					<td><input type="text" name="email" id="email"/></td>
+					<td><input type="text" name="email" id="email" value="${sessionScope.login.email}"/></td>
 				</tr>
 				<tr>
 					<td><label>*DNI ()XX.XXX.XXX-L): </label></td>
-					<td><input type="text" name="dni" id="dni"/></td>
+					<td><input type="text" name="dni" id="dni" value="${sessionScope.login.dni}"/></td>
 				</tr>
 				<tr>
 					<td><label>*Phone number: </label></td>
-					<td><input type="text" name="phone" id="phone"/></td>
+					<td><input type="text" name="phone" id="phone" value="${sessionScope.login.phoneNumber}"/></td>
 				</tr>
 				<tr>
 					<td><label>Address: </label></td>
-					<td><input type ="text" name="address" id="address"/></td>
+					<td><input type ="text" name="address" id="address" value="${sessionScope.login.address}"/></td>
 				</tr>
 				<tr>
 				<td></td>
@@ -58,7 +59,6 @@
 				</td>
 				</tr>
 			</table>
-
 		</form>
 	</div>
 </body>

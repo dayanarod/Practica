@@ -20,8 +20,9 @@
 
 		<div id="personal_information">
 			<p>
-				Your personal information is below. To change your information <a
-					href="#">Update Visitor</a> <a href="#">Update password</a>
+				Your personal information is below. To change your information
+				<a href="displayView.do?redir=updateVisitorInformation.jsp">Update Visitor</a>
+				<a href="displayView.do?redir=updateVisitorPassword.jsp">Update password</a>
 			</p>
 			<p>
 				UserName: <span id="username">${sessionScope.login.userName}</span>

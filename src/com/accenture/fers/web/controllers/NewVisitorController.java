@@ -15,7 +15,7 @@ public class NewVisitorController implements IController {
 
 		String url = "";
 
-		String firstName = request.getParameter("firstname");
+		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
 		String userName = request.getParameter("userName");
 		String password = request.getParameter("password");
@@ -26,9 +26,11 @@ public class NewVisitorController implements IController {
 		String address = request.getParameter("address");
 		Visitor visitor = new Visitor();
 		boolean vsOK = false;
+		System.out.println(firstName);
 
 		try {
-			if ((password != c_password) || (password.length() < 5)) {
+			if (!password.equals(c_password) || (password.length() < 5)) {
+				System.out.println("falla el pass");
 				request.setAttribute("fail", CTE_ERM_025);
 				url = "/register.jsp";
 			} else {
@@ -44,16 +46,20 @@ public class NewVisitorController implements IController {
 
 				VisitorService vs = new VisitorService();
 				vsOK = vs.createVisitor(visitor);
+				System.out.println("crea usuario");
 			}
 
 			if (vsOK) {
 				url = "/index.jsp";
+				System.out.println("pasa al index");
 			} else {
 				url ="/register.jsp";
+				System.out.println("vuelve a register");
 			}
 		} catch (NullPointerException e) {
 			request.setAttribute("fail", CTE_ERM_026);
 			url = "/register.jsp";
+			System.out.println("vuelve a register2");
 		}
 		return url;
 	}

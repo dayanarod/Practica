@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet Filter implementation class Filter
  */
-@WebFilter("/Filter")
+@WebFilter("*.do")
 public class Filter implements javax.servlet.Filter {
 
     /**
@@ -42,8 +42,8 @@ public class Filter implements javax.servlet.Filter {
 		//Conseguimos la url del servlet,es decir, la acción
 		String url = ((HttpServletRequest)request).getServletPath();
 
-		if((!url.equals("/login.do")) && (!url.equals("/register.do"))){
-			if(sesion.getAttribute("usuarioSession") == null){
+		if((!url.equals("/searchVisitor.do")) && (!url.equals("/newVisitor.do"))){
+			if(sesion.getAttribute("login") == null){
 				//4. Despachamos la orden
 				RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
 

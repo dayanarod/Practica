@@ -9,7 +9,7 @@ public class DisplayViewController implements IController{
 	public String process(HttpServletRequest request,
 			HttpServletResponse response) {
 
-		String url = request.getParameter("newDir");
+		String url = request.getParameter("redir");
 		return url;
 	}
 
