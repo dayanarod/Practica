@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/css\portal.css"></link>
+<link rel="stylesheet" href="css/portal.css"></link>
 </head>
 <body>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -66,7 +66,6 @@
 							<td>${visitorEvent.place}</td>
 							<td>${visitorEvent.duration}</td>
 							<td>${visitorEvent.eventType}</td>
-							<td>${visitorEvent.seatsAvailable}</td>
 							<td><a href="eventUnreg.do?eventId=${visitorEvent.eventId}">Unregister
 									Here</a></td>
 						</tr>

@@ -1,5 +1,6 @@
 package com.accenture.fers.entity;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import com.accenture.fers.exceptions.FERSGenericException;
@@ -26,7 +27,7 @@ public class Visitor extends People {
 	private String userName;
 	private String password;
 	private String confirmPassword;
-	private Set<Event> registeredEvents;
+	private Set<Event> registeredEvents = new HashSet<Event>();
 	/**
 	 * Constructor por defecto
 	 */
