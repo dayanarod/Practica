@@ -10,7 +10,7 @@ public class DisplayViewController implements IController{
 			HttpServletResponse response) {
 
 		String url = request.getParameter("redir");
-		return url;
+		return "WEB-INF/"+url;
 	}
 
 }

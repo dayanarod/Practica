@@ -39,6 +39,9 @@
 			<p>
 				Address: <span id="address">${sessionScope.login.address}</span>
 			</p>
+			<p>
+				Pass: <span id="password">${sessionScope.login.password}</span>
+			</p>
 		</div>
 		<hr></hr>
 		<div class="release">
@@ -55,6 +58,19 @@
 						<th>Event type</th>
 						<th>Action</th>
 					</tr>
+					<c:forEach var="visitorEvent" items="${sessionScope.login.registeredEvents}">
+						<tr>
+							<td>${visitorEvent.eventId}</td>
+							<td>${visitorEvent.name}</td>
+							<td>${visitorEvent.description}</td>
+							<td>${visitorEvent.place}</td>
+							<td>${visitorEvent.duration}</td>
+							<td>${visitorEvent.eventType}</td>
+							<td>${visitorEvent.seatsAvailable}</td>
+							<td><a href="eventUnreg.do?eventId=${visitorEvents.visitorId}">Unregister
+									Here</a></td>
+						</tr>
+					</c:forEach>
 				</table>
 			</form>
 		</div>

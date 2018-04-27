@@ -23,11 +23,11 @@ public class EventRegController implements IController{
 
 		try{
 			HttpSession sesion = request.getSession(true);
-			visitante = (Visitor) sesion.getAttribute("visitor");
+			visitante = (Visitor) sesion.getAttribute("login");
 
 			visitorService.registerVisitorToEvent(visitante, Integer.parseInt(request.getParameter("eventId")));
 			visitante = visitorService.searchUser(visitante);
-			sesion.setAttribute("visitor", visitante);
+			sesion.setAttribute("login", visitante);
 			request.getServletContext().setAttribute("eventList", eventService.getAllEvents());
 		} catch(FERSGenericException e){
 			request.setAttribute("exception", e.getMessage());

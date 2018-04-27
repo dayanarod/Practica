@@ -24,16 +24,16 @@
 			<table>
 				<tr>
 					<td><label>*First Name: </label></td>
-					<td><input type="text" name="nombre" id="nombre" value="${sessionScope.login.firstName}"/></td>
+					<td><input type="text" name="firstName" id="nombre" value="${sessionScope.login.firstName}"/></td>
 				</tr>
 				<tr>
 					<td><label>*Last Name: </label></td>
-					<td><input type="text" name="apellido" id="apellido" value = "${sessionScope.login.lastName}"/></td>
+					<td><input type="text" name="lastName" id="apellido" value = "${sessionScope.login.lastName}"/></td>
 				</tr>
 				<tr>
 					<td><label>*User Name: </label></td>
-					<td><input type="text" name="user_name" id="user_name" disabled
-					value ="${sessionScope.login.user_name}"/></td>
+					<td><input type="text" name="userName" id="user_name" disabled
+					value ="${sessionScope.login.userName}"/></td>
 				</tr>
 				<tr>
 					<td><label>*Email: </label></td>
@@ -45,7 +45,7 @@
 				</tr>
 				<tr>
 					<td><label>*Phone number: </label></td>
-					<td><input type="text" name="phone" id="phone" value="${sessionScope.login.phoneNumber}"/></td>
+					<td><input type="text" name="phoneNumber" id="phone" value="${sessionScope.login.phoneNumber}"/></td>
 				</tr>
 				<tr>
 					<td><label>Address: </label></td>

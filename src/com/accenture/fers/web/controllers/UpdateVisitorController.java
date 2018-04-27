@@ -11,13 +11,13 @@ public class UpdateVisitorController implements IController {
 	@Override
 	public String process(HttpServletRequest request,
 			HttpServletResponse response) {
-		String url = "/WEB-INF/updateVisitorInfo.jsp";
-
-		String firstName = request.getParameter("firstname");
+		String url = "/WEB-INF/updateVisitorInformation.jsp";
+System.out.println("entro en updateVisitor Information");
+		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
 		String email = request.getParameter("email");
 		String dni = request.getParameter("dni");
-		String phone = request.getParameter("phone");
+		String phoneNumber = request.getParameter("phoneNumber");
 		String address = request.getParameter("address");
 
 		HttpSession sesion = request.getSession();
@@ -31,7 +31,7 @@ public class UpdateVisitorController implements IController {
 			visitorUpdate.setLastName(lastName);
 			visitorUpdate.setEmail(email);
 			visitorUpdate.setDni(dni);
-			visitorUpdate.setPhoneNumber(phone);
+			visitorUpdate.setPhoneNumber(phoneNumber);
 			visitorUpdate.setAddress(address);
 
 			int update = vs.updateVisitorDetails(visitorUpdate);
