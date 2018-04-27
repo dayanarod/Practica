@@ -16,7 +16,7 @@
 			<a href="logoutController.do">Log Out</a> <a href="#">About</a> <a
 				href="#">Event Catalogue</a>
 		</div>
-		<h2>Festival Portal Page: Welcome <span id="user"></span>to your portal page:</h2>
+		<h2>Festival Portal Page: Welcome <span id="user"> ${sessionScope.login.firstName}</span>to your portal page:</h2>
 
 		<div id="personal_information">
 			<p>
@@ -67,7 +67,7 @@
 							<td>${visitorEvent.duration}</td>
 							<td>${visitorEvent.eventType}</td>
 							<td>${visitorEvent.seatsAvailable}</td>
-							<td><a href="eventUnreg.do?eventId=${visitorEvents.visitorId}">Unregister
+							<td><a href="eventUnreg.do?eventId=${visitorEvent.eventId}">Unregister
 									Here</a></td>
 						</tr>
 					</c:forEach>
