@@ -4,11 +4,26 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.accenture.fers.entity.*;
 import com.accenture.fers.service.*;
-
+/**
+ * 
+ * @author Diana Rodera Rojas
+ * @version 02/05/2018
+ * 
+ * Controlador que gestiona el registro de usuarios
+ *
+ */
 public class NewVisitorController implements IController {
 	private static final String CTE_ERM_025 = "Password diferentes o < 5";
 	private static final String CTE_ERM_026 = "Fallo en algún campo";
 
+	/**
+	 * Mantiene en register.jsp si hay algún error en el registro
+	 * Manda a index.jsp si el registr es correcto
+	 * 
+	 * @param request Petición
+	 * @param response Respuesta
+	 * @return url la vista a mostrar
+	 */
 	@Override
 	public String process(HttpServletRequest request,
 			HttpServletResponse response) {
@@ -29,11 +44,16 @@ public class NewVisitorController implements IController {
 		System.out.println(firstName);
 
 		try {
+			//Comprobamos que el password no sea igual al de confirmación
+			//Y que no tenga la longitud adecuada,
+			//Entonces le mandamos otra vez a register.jsp
 			if (!password.equals(c_password) || (password.length() < 5)) {
 				System.out.println("falla el pass");
 				request.setAttribute("fail", CTE_ERM_025);
 				url = "/register.jsp";
 			} else {
+				//Si el password es correcto
+				//Creamos el nuevo visitor
 				visitor.setUserName(userName);
 				visitor.setFirstName(firstName);
 				visitor.setLastName(lastName);
